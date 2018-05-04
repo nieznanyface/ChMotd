@@ -1,0 +1,6 @@
+name: ChMotd
+author: chlebek
+main: pl.chlebek.motd.Main
+version: 1.0
+commands:
+  motd:
