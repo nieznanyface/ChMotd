@@ -2,7 +2,7 @@
 Simple and useful MOTD plugin for Minecraft in less than 50 lines
 
 ### Commands
-`/motd` - reloads the plugin; if player doesn't have enought permissions, shows plugin info.
+`/motd` - reloads the plugin; shows plugin info if player doesn't have enought permissions
 
 ### Permissions
 `motd.reload` - makes that `/motd` command reloads the plugin
