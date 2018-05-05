@@ -14,3 +14,4 @@ maxPlayers: 13
 motds:
   - "&aChMotd is a very good plugin!"
 ```
+Plugin picks random motd from config.
