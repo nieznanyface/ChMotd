@@ -15,3 +15,6 @@ motds:
   - "&aChMotd is a very good plugin!"
 ```
 Plugin picks random motd from config.
+
+Download (1.12.2):
+https://github.com/nieznanyface/ChMotd/raw/master/ChMotd.jar
