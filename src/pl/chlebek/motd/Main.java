@@ -1,7 +1,7 @@
 package pl.chlebek.motd;
 
 import java.io.File;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,7 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerListPingEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin implements Listener {
+public class Main extends JavaPlugin implements Listener{
 
 	public String color(String str){
 		return ChatColor.translateAlternateColorCodes('&', str);
@@ -29,9 +29,9 @@ public class Main extends JavaPlugin implements Listener {
 		if(cmd.getName().equalsIgnoreCase("motd")){
 			if(sender.hasPermission("chmotd.reload")){
 				reloadConfig();
-				sender.sendMessage("§aReload successfull.");
+				sender.sendMessage("Â§aReload successfull.");
 			} else {
-				sender.sendMessage("§a§lChMotd §r§aby §lchlebek");
+				sender.sendMessage("Â§aÂ§lChMotd Â§rÂ§aby Â§lchlebek");
 			}
 		}
 		return false;
@@ -40,7 +40,7 @@ public class Main extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onPing(ServerListPingEvent e){
 		e.setMaxPlayers(getConfig().getInt("maxPlayers"));
-		e.setMotd(color(getConfig().getStringList("motds").get(new Random().nextInt() * (getConfig().getStringList("motds").size() - 1))));
+		e.setMotd(color(getConfig().getStringList("motds").get(ThreadLocalRandom.current().nextInt(0, getConfig().getStringList("motds").size()))));
 	}
 
 }
