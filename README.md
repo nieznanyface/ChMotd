@@ -17,4 +17,4 @@ motds:
 Plugin picks random motd from config.
 
 Download (1.12.2):
-[https://github.com/nieznanyface/ChMotd/raw/master/ChMotd.jar](here)
+(here)[https://github.com/nieznanyface/ChMotd/raw/master/ChMotd.jar]
