@@ -1,6 +1,6 @@
 name: ChMotd
-author: chlebek
+version: 2.0.0
 main: pl.chlebek.motd.Main
-version: 1.0
+description: Simple MOTD plugin
 commands:
   motd:
